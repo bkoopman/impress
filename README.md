@@ -1,6 +1,6 @@
 # Impress
 
-SDL Innovate 2015 presentation using impress.js
+SDL Innovate 2015 presentation using [impress.js](https://github.com/impress/impress.js)
 
 ## DXA module
 
