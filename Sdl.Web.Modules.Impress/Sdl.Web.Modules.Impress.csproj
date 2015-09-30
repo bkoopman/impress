@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}</ProjectGuid>
+    <ProjectGuid>{4060565E-55F3-4C52-AF6F-6FC4868C27A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sdl.Web.Modules.Impress</RootNamespace>
@@ -29,104 +29,61 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Tridion71Release|AnyCPU'">
-    <OutputPath>bin\Tridion71Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Tridion71Debug|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Tridion71Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    <Reference Include="Sdl.Web.Common">
+      <HintPath>..\_references\dxa-1.1\Sdl.Web.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sdl.Web.Mvc">
+      <HintPath>..\_references\dxa-1.1\Sdl.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="ImpressAreaRegistration.cs" />
-    <Compile Include="Models\Message.cs" />
-    <Compile Include="Models\Slide.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Slide.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Areas\Impress\Views\Entity\Message.cshtml" />
     <None Include="Areas\Impress\Views\Entity\FreeText.cshtml" />
+    <None Include="Areas\Impress\Views\Entity\Message.cshtml" />
     <None Include="Areas\Impress\Views\Entity\Overview.cshtml" />
     <None Include="Areas\Impress\Views\Entity\Slide.cshtml" />
-    <None Include="Areas\Impress\Views\Page\ImpressPage.cshtml" />
     <None Include="Areas\Impress\Views\Page\_ViewStart.cshtml" />
+    <None Include="Areas\Impress\Views\Page\ImpressPage.cshtml" />
     <None Include="Areas\Impress\Views\Region\Fallback.cshtml" />
     <None Include="Areas\Impress\Views\Region\Hint.cshtml" />
     <None Include="Areas\Impress\Views\Region\Presentation.cshtml" />
     <None Include="Areas\Impress\Views\Shared\_ImpressLayout.cshtml" />
     <None Include="Areas\Impress\Views\web.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Sdl.Web.Common\Sdl.Web.Common.csproj">
-      <Project>{21c08f9a-24c2-481a-95c3-a255be9771a7}</Project>
-      <Name>Sdl.Web.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Sdl.Web.Mvc\Sdl.Web.Mvc.csproj">
-      <Project>{923b2009-9a0b-4425-88a5-bf7af25c8f8b}</Project>
-      <Name>Sdl.Web.Mvc</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
-  <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-  </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="AfterBuild">
+  </Target>
+  -->
   <Target Name="BeforeBuild">
     <WriteLinesToFile Condition=" '$(AsmVersion)' != '' " File="Properties\VersionInfo.cs" Overwrite="True" Lines="[assembly: System.Reflection.AssemblyVersion(&quot;$(AsmVersion)&quot;)]  // Generated by build%0a[assembly: System.Reflection.AssemblyInformationalVersion(&quot;$(AsmVersion)&quot;)]  // Generated by build" />
     <WriteLinesToFile Condition=" '$(FileVersion)' != '' " File="Properties\VersionInfo.cs" Overwrite="False" Lines="[assembly: System.Reflection.AssemblyFileVersion(&quot;$(FileVersion)&quot;)]  // Generated by build" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>rmdir "$(SolutionDir)..\mod\Impress\web\Site" /q /s
-xcopy "$(TargetPath)" "$(SolutionDir)..\mod\Impress\web\Site\bin\" /Y
-xcopy "$(ProjectDir)\Areas\*" "$(SolutionDir)..\mod\Impress\web\Site\Areas\" /Y /s
-xcopy "$(SolutionDir)..\mod\Impress\web\Site\*" "$(SolutionDir)..\Site\" /Y /s</PostBuildEvent>
+    <PostBuildEvent>REM Deploy build artifacts to DXA Site (on development machines with DXA_SITE_DIR environment variable set)
+if defined DXA_SITE_DIR (
+xcopy "$(TargetPath)" "%25DXA_SITE_DIR%25\bin" /Y
+xcopy "$(ProjectDir)Areas" "%25DXA_SITE_DIR%25\Areas" /S /I /Y
+)</PostBuildEvent>
   </PropertyGroup>
 </Project>

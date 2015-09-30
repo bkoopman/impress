@@ -4,19 +4,22 @@ using Sdl.Web.Mvc.Configuration;
 
 namespace Sdl.Web.Modules.Impress
 {
-    public class ImpressAreaRegistration : BaseAreaRegistration
+    public class ImpressAreaRegistration : BaseAreaRegistration 
     {
         public override string AreaName
         {
-            get { return "Impress"; }
+            get
+            {
+                return "Impress";
+            }
         }
 
         protected override void RegisterAllViewModels()
         {
-            RegisterViewModel("Presentation", typeof(Region), "Region");
-            RegisterViewModel("Fallback", typeof(Region), "Region");
-            RegisterViewModel("Hint", typeof(Region), "Region");
-            RegisterViewModel("ImpressPage", typeof(WebPage), "Page");
+            RegisterViewModel("Presentation", typeof(RegionModel), "Region");
+            RegisterViewModel("Fallback", typeof(RegionModel), "Region");
+            RegisterViewModel("Hint", typeof(RegionModel), "Region");
+            RegisterViewModel("ImpressPage", typeof(PageModel), "Page");
             RegisterViewModel("Slide", typeof(Slide));
             RegisterViewModel("FreeText", typeof(Slide));
             RegisterViewModel("Overview", typeof(Slide));

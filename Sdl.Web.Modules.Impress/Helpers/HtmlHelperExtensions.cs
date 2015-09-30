@@ -2,7 +2,6 @@
 using System;
 using System.Web.Mvc;
 
-
 namespace Sdl.Web.Modules.Impress.Helpers
 {
     public static class HtmlHelperExtensions
